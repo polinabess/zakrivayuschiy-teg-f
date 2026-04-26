@@ -22,7 +22,7 @@
   min-block-size: 100dvb;
 }
 
-@supports (font-variation-settings: normal) {
+@supports (font-variation-settings: "wght" var(--font-weight-main-text)) {
   .page {
     font-family: var(--font-main), sans-serif;
     font-variation-settings: var(--font-weight-main-text);
@@ -75,7 +75,6 @@
   opacity: 50%;
   font-weight: 400;
   font-size: var(--font-size-min);
-  font-size: 0.778em;
   text-shadow:
   -2px 0 #000000, /* тень слева */
   0 2px #000000,  /* тень снизу */
