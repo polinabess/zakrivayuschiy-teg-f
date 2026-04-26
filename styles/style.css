@@ -20,6 +20,8 @@
   background-size: cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  display: grid;
+  justify-content: center;
 }
 
 @supports (font-variation-settings: "wght" var(--font-weight-main-text)) {
@@ -33,6 +35,13 @@
   gap: 19px;
   padding: var(--padding-header-clamp-top-bottom) var(--padding-header-clamp-left-right);
   letter-spacing: 0;
+  background-color: white;
+  display: grid;
+  justify-content: center;
+  border: 2px solid #000;
+  inline-size: clamp(20.833rem, 14.476rem + 30.516vw, 38.889rem);
+  text-transform: uppercase;
+  font-family: var(--font-decorative), sans-serif;
 }
 
 .header__label {
@@ -45,14 +54,22 @@
   font-size: clamp(0.778rem, 0.602rem + 0.845vw, 1.278rem);
   line-height: 100%;
   letter-spacing: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .main {
   gap: 50px;
+  display: grid;
+  justify-content: center;
 }
 
 .section {
   padding-bottom: 25px;
+  background-color: white;
+  border: 2px solid #000;
+  position: relative;
+  inline-size: clamp(20.833rem, 14.476rem + 30.516vw, 38.889rem);
 }
 
 .section__card-title {
@@ -76,10 +93,14 @@
   font-weight: 400;
   font-size: var(--font-size-min);
   text-shadow:
-  -2px 0 #000000, /* тень слева */
-  0 2px #000000,  /* тень снизу */
-  2px 0 #000000,  /* тень справа */
-  0 -2px #000000; /* тень сверху */
+  -2px 0 #000000,
+  0 2px #000000,
+  2px 0 #000000,
+  0 -2px #000000;
+  mix-blend-mode: hard-light;
+  font-family: var(--font-decorative), sans-serif;
+  position: absolute;
+  text-transform: uppercase;
 }
 
 @supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
@@ -112,6 +133,7 @@
   margin: 25px;
   line-height: 1.1667rem;
   letter-spacing: 0;
+  display: grid;
 }
 
 .like-icon {
@@ -142,6 +164,7 @@
   border: 2px solid transparent;
   padding: 0;
   transition: border-color 0.3s ease;
+  background-color: transparent;
 }
 
 .like-icon:hover .core {
@@ -194,11 +217,18 @@
   gap: 4px;
   padding-right: 25px;
   block-size: 38px;
+  display: flex;
 }
 
 .card__like-button {
   padding: 10.5px 37px;
   inline-size: 130px;
+  /* button-focus button-hover; */
+  mix-blend-mode: difference;
+  border: 2px solid #fff;
+  background-color: transparent;
+  justify-content: center;
+  font-size: var(--font-size-min);
 }
 
 button:hover {
@@ -216,10 +246,10 @@ button:hover {
   top: 0;
   left: 0;
   display: block;
-  width: 0; /* Начальная ширина — 0 */
+  width: 0;
   height: 100%;
   background-color: #fff;
-  transition: width 0.5s ease-in-out; /* Анимируем ширину вместо transform */
+  transition: width 0.5s ease-in-out;
   mix-blend-mode: difference;
 }
 
@@ -264,15 +294,6 @@ button:focus-visible {
   height: var(--size-floppy-continue);
 }
 
-.main__container-button {
-  position: relative;
-  justify-self: center;
-  padding: 0;
-  background-color: #fff;
-  inline-size: clamp(17rem, 16.433rem + 2.723vw, 18.611rem);
-  block-size: clamp(3.0556rem, 5.234rem + -2.723vw, 4.6667rem);
-}
-
 .main__save-button {
   grid-template-columns: min-content 1fr;
   align-items: baseline;
@@ -280,8 +301,14 @@ button:focus-visible {
   gap: 8px;
   padding: 17px 20px;
   background-color: #000;
-  inline-size: 100%;
-  block-size: 100%;
+  inline-size: clamp(17rem, 16.433rem + 2.723vw, 18.611rem);
+  block-size: clamp(3.0556rem, 5.234rem + -2.723vw, 4.6667rem);
+  justify-self: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  font-size: var(--font-size-min);
+  display: grid;
+  justify-content: center;
 }
 
 .button__text {
@@ -290,6 +317,8 @@ button:focus-visible {
   line-height: 90%;
   text-wrap: nowrap;
   white-space: nowrap;
+  font-family: var(--font-decorative), sans-serif;
+  display: flex;
 }
 
 .button__text,
@@ -303,12 +332,19 @@ button:focus-visible {
   grid-column: 2/3;
   grid-row: 1;
   align-self: center;
+  font-family: var(--font-decorative), sans-serif;
 }
 
 .dialog__button {
   grid-column: 1/3;
   padding-top: 10.5px;
   padding-bottom: 10.5px;
+  mix-blend-mode: difference;
+  border: 2px solid #fff;
+  font-size: var(--font-size-min);
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
 }
 
 .dialog {
@@ -322,70 +358,15 @@ button:focus-visible {
   font-size: 14px;
   inline-size: clamp(18.944rem, 18.71rem + 1.127vw, 19.611rem);
   block-size: 191px;
+  border: 2px solid #000;
+}
+
+.dialog__button__text {
+  text-transform: uppercase;
 }
 
 .dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
-}
-
-.text-transform-uppercase {
-  text-transform: uppercase;
-}
-
-.mix-blend-mode-hard-light {
-  mix-blend-mode: hard-light;
-}
-
-.font-decorative {
-  font-family: var(--font-decorative), sans-serif;
-}
-
-.font-size-button {
-  font-size: var(--font-size-min);
-}
-
-.border-black {
-  border: 2px solid #000;
-}
-
-.border-white {
-  border: 2px solid #fff;
-}
-
-.mix-blend-mode-difference {
-  mix-blend-mode: difference;
-}
-
-.position-relative {
-  position: relative;
-}
-
-.position-absolute {
-  position: absolute;
-}
-
-.display-grid {
-  display: grid;
-}
-
-.display-flex {
-  display: flex;
-}
-
-.justify_content-center {
-  justify-content: center;
-}
-
-.bg_color-transparent {
-  background-color: transparent;
-}
-
-.bg_color-white {
-  background-color: #fff;
-}
-
-.inline-size-block-clamp {
-  inline-size: clamp(20.833rem, 14.476rem + 30.516vw, 38.889rem);
 }
 
 .filter-grayscale-contrast {
