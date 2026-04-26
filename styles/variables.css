@@ -1,1 +1,26 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-main: 'Inter-Variable';
+  --font-size-main: 18px;
+  --font-decorative: 'PressStart2P';
+  --font-weight-decorative: 400;
+  --font-weight-main-title: 715;
+  --font-weight-main-text: 410;
+  --bg-gradient-from: rgba(231, 231, 231, 1);
+  --bg-gradient-to: rgba(26, 26, 26, 1);
+  --max-inline-size-cards: 700px;
+  --color-start-horizontal-and-vertical-gradient: #d3d3d3;
+  --color-stop-horizontal-and-vertical-gradient: transparent;
+  --color-start-transition-gradient: #e7e7e7;
+  --color-stop-transition-gradient: #1a1a1a;
+  --gradient-horizontal: repeating-linear-gradient(to right, var(--color-start-horizontal-and-vertical-gradient) 0 2px, var(--color-stop-horizontal-and-vertical-gradient) 2px 4px);
+  --gradient-vertical: repeating-linear-gradient(to bottom, var(--color-start-horizontal-and-vertical-gradient) 0 2px, var(--color-stop-horizontal-and-vertical-gradient) 2px 4px);
+  --gradient-transition: linear-gradient(to bottom, var(--color-start-transition-gradient) 0.01%, var(--color-stop-transition-gradient));
+  --padding-header-clamp-top-bottom: clamp(6.778rem, 6.621rem + 0.751vw, 7.222rem);
+  --padding-header-clamp-left-right: clamp(0.889rem, -1.185rem + 9.953vw, 6.778rem);
+  --size-floppy-save: clamp(1.1667rem, 1.6925rem + -0.6573vw, 1.5556rem);
+  --size-floppy-continue: 39px;
+  --font-size-min: 14px;
+  --animation-fill-color: red;
+  --animation-contour-color: #000;
+}
