@@ -5,7 +5,7 @@
   --font-decorative: 'PressStart2P';
   --font-weight-decorative: 400;
   --font-weight-main-title: 715;
-  --font-weight-main-text: 410;
+  --font-weight-main-text: "wght" 410;
   --bg-gradient-from: rgba(231, 231, 231, 1);
   --bg-gradient-to: rgba(26, 26, 26, 1);
   --max-inline-size-cards: 700px;
