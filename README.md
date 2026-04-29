@@ -7,3 +7,6 @@
 
 
 https://github.com/polinabess/zakrivayuschiy-teg-f
+
+#### ссылка на сайт:
+https://polinabess.github.io/zakrivayuschiy-teg-f/
